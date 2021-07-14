@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - dalilak</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/bs5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light glasseffectNav">
+            <div class="container-fluid ">
+                <a class="navbar-brand custom-btn btn-12  pt-3" asp-area="" asp-controller="Home" asp-action="Index"><span>دليلك</span><span>Dalilak</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark btn-deep" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark btn-deep" asp-area="" asp-controller="Products" asp-action="Index">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark btn-deep" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark btn-deep" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+
+        <div id="social_buttons">
+            <a class="facebookBtn smGlobalBtn" href="https://www.facebook.com/dalilaksv" target="_blank"></a>
+            <a class="twitterBtn smGlobalBtn" href="#" target="_blank"></a>
+            <a class="googleplusBtn smGlobalBtn" href="#" target="_blank"></a>
+            <a class="linkedinBtn smGlobalBtn" href="https://www.linkedin.com/in/mohammed-abunada-8050ba17" target="_blank"></a>
+            <a class="pinterestBtn smGlobalBtn" href="https://appsto.re/se/FTof1.i" target="_blank"></a>
+            <a class="tumblrBtn smGlobalBtn" href="#" target="_blank"></a>
+            <a class="rssBtn smGlobalBtn" href="#" target="_blank"></a>
+
+            <div>
+                &copy; 2021 - dalilak in Sweden -
+                <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> -
+                <a  href="tel:0046737551861"> Call us</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+
+<!--
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+
+-->
